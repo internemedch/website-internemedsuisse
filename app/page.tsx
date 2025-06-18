@@ -253,7 +253,7 @@ export default function InterneMedecineSuisse() {
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Faut-il parler allemand pour travailler en Suisse Romande(Genève, Lausanne, Neuchâtel, Sion,...) ?</h3>
+                    <h3 className="text-lg font-semibold">Faut-il parler allemand pour travailler en Suisse Romande (Genève, Lausanne, Neuchâtel, Sion, ...) ?</h3>
                     <ChevronDown className="h-5 w-5 text-gray-400" />
                   </div>
                   <p className="text-gray-600 mt-3">
@@ -292,11 +292,11 @@ export default function InterneMedecineSuisse() {
 
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                Je suis Dr. Thomas, médecin interne dans le service radiologie aux Hôpitaux Universitaires de Genève depuis 2022.
+                Je suis Dr. Thomas, médecin interne dans le service radiologie aux Hôpitaux Universitaires de Genève depuis 2024.
                 Diplômé de la faculté de médecine de Lyon, j'ai vécu exactement ce que vous traversez aujourd'hui.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                En 2021, j'ai passé des mois à chercher des informations éparpillées sur internet, à contacter des
+                En 2023, j'ai passé des mois à chercher des informations éparpillées sur internet, à contacter des
                 dizaines de personnes, à faire des erreurs coûteuses qui ont retardé mon projet. J'ai perdu un temps
                 précieux et beaucoup d'énergie dans ce parcours du combattant.
               </p>
