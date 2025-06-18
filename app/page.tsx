@@ -37,7 +37,7 @@ export default function InterneMedecineSuisse() {
               Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Le guide pratique que j'aurais aimé avoir pour réussir mon internat à Genève
+              Le guide pratique que j'aurais aimé avoir pour réussir mon internat en Suisse
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg">
@@ -244,7 +244,7 @@ export default function InterneMedecineSuisse() {
                     <ChevronDown className="h-5 w-5 text-gray-400" />
                   </div>
                   <p className="text-gray-600 mt-3">
-                    Entre 2000 et 4000 CHF selon les cas. Le guide détaille tous les frais pour éviter les mauvaises
+                    Entre 850 et 4000 CHF selon les cas. Le guide détaille tous les frais pour éviter les mauvaises
                     surprises.
                   </p>
                 </CardContent>
@@ -253,7 +253,7 @@ export default function InterneMedecineSuisse() {
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Faut-il parler allemand pour travailler à Genève ?</h3>
+                    <h3 className="text-lg font-semibold">Faut-il parler allemand pour travailler en Suisse Romande(Genève, Lausanne, Neuchâtel, Sion,...) ?</h3>
                     <ChevronDown className="h-5 w-5 text-gray-400" />
                   </div>
                   <p className="text-gray-600 mt-3">
@@ -292,7 +292,7 @@ export default function InterneMedecineSuisse() {
 
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                Je suis Dr. Thomas, interne en médecine interne aux Hôpitaux Universitaires de Genève depuis 2022.
+                Je suis Dr. Thomas, médecin interne dans le service radiologie aux Hôpitaux Universitaires de Genève depuis 2022.
                 Diplômé de la faculté de médecine de Lyon, j'ai vécu exactement ce que vous traversez aujourd'hui.
               </p>
               <p className="text-lg leading-relaxed mb-6">
