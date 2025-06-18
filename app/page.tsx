@@ -44,7 +44,7 @@ export default function InterneMedecineSuisse() {
                 <FileText className="mr-2 h-5 w-5" />
                 Télécharger le Guide
               </Button>
-              <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ 50+ pages</p>
+              <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ 40+ pages</p>
             </div>
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
               <div className="flex items-center">
