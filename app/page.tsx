@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { FileText, Home, Hospital, CreditCard, MapPin, CheckCircle, Star, ChevronDown, Mail, Phone } from "lucide-react"
+import { FileText, Home, Hospital, CreditCard, MapPin, CheckCircle, Star, ChevronDown, Mail } from "lucide-react"
 
 export default function InterneMedecineSuisse() {
   return (
@@ -32,7 +32,7 @@ export default function InterneMedecineSuisse() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2024</Badge>
+            <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2025</Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
             </h1>
@@ -351,10 +351,6 @@ export default function InterneMedecineSuisse() {
                   <Mail className="h-4 w-4 mr-2" />
                   contact@internemedecinesuisse.ch
                 </div>
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2" />
-                  +41 22 XXX XX XX
-                </div>
               </div>
             </div>
 
@@ -382,7 +378,7 @@ export default function InterneMedecineSuisse() {
             <div>
               <h4 className="font-semibold mb-4">Disclaimer</h4>
               <p className="text-xs text-gray-400">
-                Ce guide est basé sur une expérience personnelle et des informations disponibles en 2024. Les procédures
+                Ce guide est basé sur une expérience personnelle et des informations disponibles en 2025. Les procédures
                 peuvent évoluer. Vérifiez toujours les informations officielles.
               </p>
             </div>
