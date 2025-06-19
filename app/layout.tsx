@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     images: [
       {
-        url: '/guide-interne-suisse.jpg',
+        url: '/guide-internesuisse.png',
         width: 1200,
         height: 630,
         alt: 'Guide Interne Médecine Suisse',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
     description: 'Le guide pratique pour réussir son internat de médecine en Suisse',
-    images: ['/guide-interne-suisse.jpg'],
+    images: ['/guide-internesuisse.png'],
   },
   
   // Favicon and icons
