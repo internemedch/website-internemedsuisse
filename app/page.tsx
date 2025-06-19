@@ -44,14 +44,14 @@ export default function InterneMedecineSuisse() {
                 <FileText className="mr-2 h-5 w-5" />
                 Télécharger le Guide
               </Button>
-              <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ 40+ pages</p>
+              <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ +de 40 pages</p>
             </div>
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
               <div className="flex items-center">
                 <Star className="h-4 w-4 text-yellow-400 mr-1" />
                 <span>4.9/5 (127 avis)</span>
               </div>
-              <div>500+ médecins aidés</div>
+              <div>+ de 500 médecins aidés</div>
             </div>
           </div>
         </div>
@@ -319,7 +319,7 @@ export default function InterneMedecineSuisse() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Prêt à concrétiser votre projet ?</h2>
-            <p className="text-xl text-red-100 mb-8">Rejoignez les 500+ médecins qui ont déjà téléchargé le guide</p>
+            <p className="text-xl text-red-100 mb-8">Rejoignez les +de 500 médecins qui ont déjà téléchargé le guide</p>
             <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
               <FileText className="mr-2 h-5 w-5" />
               Télécharger le Guide Maintenant
