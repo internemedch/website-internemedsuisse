@@ -1,9 +1,55 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, Home, Hospital, CreditCard, MapPin, CheckCircle, Star, ChevronDown, Mail } from "lucide-react"
+import { loadStripe } from '@stripe/stripe-js'
+import { useState } from 'react'
+
+// Initialiser Stripe
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!)
 
 export default function InterneMedecineSuisse() {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleBuyGuide = async () => {
+    try {
+      setIsLoading(true)
+      
+      // Créer une session de paiement
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de la création de la session')
+      }
+
+      const { sessionId } = await response.json()
+      
+      // Rediriger vers Stripe Checkout
+      const stripe = await stripePromise
+      if (stripe) {
+        const { error } = await stripe.redirectToCheckout({
+          sessionId: sessionId,
+        })
+        
+        if (error) {
+          console.error('Erreur Stripe:', error)
+          alert('Une erreur est survenue. Veuillez réessayer.')
+        }
+      }
+    } catch (error) {
+      console.error('Erreur:', error)
+      alert('Une erreur est survenue. Veuillez réessayer.')
+    } finally {
+      setIsLoading(false)
+    }
+  }
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -17,7 +63,13 @@ export default function InterneMedecineSuisse() {
               </div>
               <span className="text-xl font-bold text-gray-900">Interne Médecine Suisse</span>
             </div>
-            <Button className="bg-red-600 hover:bg-red-700 text-white">Télécharger le Guide</Button>
+            <Button 
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={handleBuyGuide}
+              disabled={isLoading}
+            >
+              {isLoading ? 'Chargement...' : 'Acheter le Guide - 35€'}
+            </Button>
           </div>
         </div>
       </header>
@@ -40,9 +92,14 @@ export default function InterneMedecineSuisse() {
               Le guide pratique que j'aurais aimé avoir pour réussir mon internat en Suisse
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg">
+              <Button 
+                size="lg" 
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                onClick={handleBuyGuide}
+                disabled={isLoading}
+              >
                 <FileText className="mr-2 h-5 w-5" />
-                Télécharger le Guide
+                {isLoading ? 'Chargement...' : 'Acheter le Guide - 35€'}
               </Button>
               <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ +de 40 pages</p>
             </div>
@@ -320,9 +377,14 @@ export default function InterneMedecineSuisse() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Prêt à concrétiser votre projet ?</h2>
             <p className="text-xl text-red-100 mb-8">Rejoignez les +de 500 médecins qui ont déjà téléchargé le guide</p>
-            <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
+            <Button 
+              size="lg" 
+              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              onClick={handleBuyGuide}
+              disabled={isLoading}
+            >
               <FileText className="mr-2 h-5 w-5" />
-              Télécharger le Guide Maintenant
+              {isLoading ? 'Chargement...' : 'Acheter le Guide Maintenant - 35€'}
             </Button>
             <p className="text-red-100 text-sm mt-4">Accès immédiat • Garantie satisfait ou remboursé 30 jours</p>
           </div>
