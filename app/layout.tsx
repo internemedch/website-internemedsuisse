@@ -3,6 +3,7 @@ import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://internemedecinesuisse.ch'),
   title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
   description: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. 40+ pages d\'expérience d\'un interne à Genève. Démarches, visa, logement, candidature aux hôpitaux.',
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
         url: '/guide-internesuisse.png',
         width: 1200,
         height: 630,
-        alt: 'Guide Interne Médecine Suisse',
+        alt: 'Guide Complet - Devenir Interne de Médecine en Suisse',
       },
     ],
   },
