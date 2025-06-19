@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   metadataBase: new URL('https://internemedecinesuisse.ch'),
   title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
-  description: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. 40+ pages d\'expérience d\'un interne à Genève. Démarches, visa, logement, candidature aux hôpitaux.',
+  description: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. + de 40 pages d\'expérience d\'un interne à Genève. Démarches, visa, logement, candidature aux hôpitaux.',
   keywords: [
     'internat médecine suisse',
     'résidanat suisse',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   // Open Graph / Social Media
   openGraph: {
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
-    description: 'Le guide que j\'aurais aimé avoir pour réussir mon internat en Suisse. 40+ pages d\'expérience pratique.',
+    description: 'Le guide que j\'aurais aimé avoir pour réussir mon internat en Suisse. + de 40 pages d\'expérience en Suisse.',
     url: 'https://internemedecinesuisse.ch',
     siteName: 'Interne Médecine Suisse',
     type: 'website',
