@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
@@ -128,6 +129,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <SpeedInsights />
         
         {/* Analytics placeholder */}
         <noscript>
