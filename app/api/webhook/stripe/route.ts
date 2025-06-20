@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
         // Générer le lien signé AWS S3
         const downloadUrl = await generateSignedUrl(
           process.env.AWS_S3_BUCKET_NAME || 'guide-interne-suisse',
-          'guide-interne-medecine-suisse.pdf' // Nom de votre fichier PDF dans S3
+          'guide-interne-suisse.pdf' // Nom de votre fichier PDF dans S3
         )
 
         console.log('✅ AWS S3 signed URL generated successfully')
