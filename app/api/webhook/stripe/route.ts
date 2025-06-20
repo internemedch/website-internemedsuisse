@@ -145,7 +145,7 @@ export async function POST(request: NextRequest) {
 
         // Envoyer l'email avec Resend
         const emailResult = await resend.emails.send({
-          from: 'Dr. Thomas <noreply@internemedecinesuisse.ch>', // Remplacez par votre domaine vérifié
+          from: 'Dr. Thomas <noreply@interne-medecine-suisse.com>',
           to: [customerEmail],
           subject: '🎉 Votre Guide Interne Médecine Suisse est prêt !',
           html: emailTemplate(customerName, downloadUrl),
