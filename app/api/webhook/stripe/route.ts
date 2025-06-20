@@ -4,11 +4,11 @@ import { Resend } from 'resend'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_dummy', {
   apiVersion: '2025-05-28.basil',
 })
 
-const resend = new Resend(process.env.RESEND_API_KEY!)
+const resend = new Resend(process.env.RESEND_API_KEY || 'dummy_key')
 
 // Configuration AWS S3
 const s3Client = new S3Client({
