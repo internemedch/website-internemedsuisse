@@ -114,6 +114,10 @@ export default function RootLayout({
               "@type": "Product",
               "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
               "description": "Guide pratique pour réussir son internat de médecine en Suisse",
+              "image": [
+                "https://internemedecinesuisse.ch/guide.png",
+                "https://internemedecinesuisse.ch/guide-internesuisse.png"
+              ],
               "brand": {
                 "@type": "Brand",
                 "name": "Interne Médecine Suisse"
@@ -129,14 +133,56 @@ export default function RootLayout({
               },
               "offers": {
                 "@type": "Offer",
+                "url": "https://internemedecinesuisse.ch",
+                "priceCurrency": "EUR",
+                "price": "49.99",
+                "priceValidUntil": "2025-12-31",
                 "availability": "https://schema.org/InStock",
-                "priceCurrency": "CHF"
+                "seller": {
+                  "@type": "Organization",
+                  "name": "Interne Médecine Suisse"
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "CH",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "merchantReturnDays": 30,
+                  "returnMethod": "https://schema.org/ReturnByMail",
+                  "returnFees": "https://schema.org/FreeReturn"
+                },
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0.00",
+                    "currency": "EUR"
+                  },
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 0,
+                      "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 0,
+                      "unitCode": "DAY"
+                    }
+                  }
+                }
               },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "127"
-              }
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "category": "Educational Material",
+              "productID": "guide-interne-medecine-suisse-2025"
             })
           }}
         />
