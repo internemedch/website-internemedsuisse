@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
               description: 'Le guide pratique complet pour réussir votre internat en Suisse. Plus de 40 pages avec toutes les démarches pas à pas.',
               images: [`${origin}/guide.png`],
             },
-            unit_amount: 6500, // 65€ en centimes
+            unit_amount: 49999, // 49.99€ en centimes
           },
           quantity: 1,
         },
