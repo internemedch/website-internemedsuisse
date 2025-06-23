@@ -89,6 +89,19 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="canonical" href="https://internemedecinesuisse.ch" />
         
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LG6RVDYKT"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1LG6RVDYKT');
+            `,
+          }}
+        />
+        
         {/* Preload important resources */}
         <link rel="preload" href="/fonts" as="font" type="font/woff2" crossOrigin="anonymous" />
         
