@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { FileText, Home, Hospital, CreditCard, MapPin, CheckCircle, Star, ChevronDown, Mail } from "lucide-react"
 import { loadStripe } from '@stripe/stripe-js'
 import { useState } from 'react'
+import Image from 'next/image'
 
 // Initialiser Stripe
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!)
@@ -83,32 +84,60 @@ export default function InterneMedecineSuisse() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2025</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Le guide pratique que j'aurais aimé avoir pour réussir mon internat en Suisse
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button 
-                size="lg" 
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
-                onClick={handleBuyGuide}
-                disabled={isLoading}
-              >
-                <FileText className="mr-2 h-5 w-5" />
-                {isLoading ? 'Chargement...' : 'Acheter le Guide'}
-              </Button>
-              <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ +de 40 pages</p>
-            </div>
-            <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
-              <div className="flex items-center">
-                <Star className="h-4 w-4 text-yellow-400 mr-1" />
-                <span>4.9/5 (127 avis)</span>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Contenu textuel */}
+              <div className="text-center lg:text-left">
+                <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2025</Badge>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-600 mb-8">
+                  Le guide pratique que j'aurais aimé avoir pour réussir mon internat en Suisse
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
+                  <Button 
+                    size="lg" 
+                    className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                    onClick={handleBuyGuide}
+                    disabled={isLoading}
+                  >
+                    <FileText className="mr-2 h-5 w-5" />
+                    {isLoading ? 'Chargement...' : 'Acheter le Guide - 35€'}
+                  </Button>
+                  <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ +de 40 pages</p>
+                </div>
+                <div className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                    <span>4.9/5 (127 avis)</span>
+                  </div>
+                  <div>+ de 500 médecins aidés</div>
+                </div>
               </div>
-              <div>+ de 500 médecins aidés</div>
+
+              {/* Image du guide */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  {/* Effet d'ombre et de brillance */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-red-600 to-blue-600 rounded-lg blur opacity-20 animate-pulse"></div>
+                  <div className="relative bg-white p-2 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/guide.png"
+                      alt="Guide Complet - Devenir Interne de Médecine en Suisse"
+                      width={400}
+                      height={600}
+                      className="rounded-lg shadow-lg"
+                      priority
+                      quality={95}
+                    />
+                    {/* Badge de prix sur l'image */}
+                    <div className="absolute -top-2 -right-2 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                      35€
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -411,7 +440,7 @@ export default function InterneMedecineSuisse() {
               <div className="space-y-2 text-sm text-gray-400">
                 <div className="flex items-center">
                   <Mail className="h-4 w-4 mr-2" />
-                  contact@internemedecinesuisse.ch
+                  interne-medecine-suisse@proton.me
                 </div>
               </div>
             </div>

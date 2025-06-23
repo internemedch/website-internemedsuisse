@@ -67,7 +67,7 @@ export default function SuccessPage() {
                       <p className="text-sm font-medium text-yellow-800">Email en cours d&apos;envoi</p>
                       <p className="text-sm text-yellow-700">
                         Vérifiez votre boîte mail (y compris les spams). Si vous ne recevez rien dans 10 minutes, 
-                        contactez-nous à contact@internemedecinesuisse.ch
+                        contactez-nous à interne-medecine-suisse@proton.me
                       </p>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ export default function SuccessPage() {
                 </Button>
               </Link>
               <p className="text-sm text-gray-500">
-                Une question ? Contactez-nous à contact@internemedecinesuisse.ch
+                Une question ? Contactez-nous à interne-medecine-suisse@proton.me
               </p>
             </div>
           </div>

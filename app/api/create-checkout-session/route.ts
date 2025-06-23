@@ -19,9 +19,9 @@ export async function POST(request: NextRequest) {
             product_data: {
               name: 'Guide Complet - Devenir Interne de Médecine en Suisse',
               description: 'Le guide pratique complet pour réussir votre internat en Suisse. Plus de 40 pages avec toutes les démarches pas à pas.',
-              images: [`${origin}/guide-internesuisse.png`],
+              images: [`${origin}/guide.png`],
             },
-            unit_amount: 3500, // 35€ en centimes
+            unit_amount: 6500, // 65€ en centimes
           },
           quantity: 1,
         },
