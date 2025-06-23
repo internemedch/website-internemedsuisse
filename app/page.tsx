@@ -103,7 +103,7 @@ export default function InterneMedecineSuisse() {
                     disabled={isLoading}
                   >
                     <FileText className="mr-2 h-5 w-5" />
-                    {isLoading ? 'Chargement...' : 'Acheter le Guide - 35€'}
+                    {isLoading ? 'Chargement...' : 'Acheter le Guide'}
                   </Button>
                   <p className="text-sm text-gray-500">✓ Accès immédiat • ✓ Format PDF • ✓ +de 40 pages</p>
                 </div>
