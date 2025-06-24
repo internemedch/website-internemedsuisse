@@ -5,14 +5,94 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, Home, Hospital, CreditCard, MapPin, CheckCircle, Star, ChevronDown, Mail } from "lucide-react"
 import { loadStripe } from '@stripe/stripe-js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 // Initialiser Stripe
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!)
 
 export default function InterneMedecineSuisse() {
   const [isLoading, setIsLoading] = useState(false)
+
+  // Données structurées pour le produit
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
+    "description": "Le guide pratique complet pour réussir son internat de médecine en Suisse. Plus de 40 pages d'expérience pratique et de conseils d'expert.",
+    "image": [
+      "https://internemedecinesuisse.com/guide.png",
+      "https://internemedecinesuisse.com/guide-internesuisse.png"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "Interne Médecine Suisse"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Thomas",
+      "jobTitle": "Médecin Interne",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Hôpitaux Universitaires de Genève"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "49.99",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://internemedecinesuisse.com",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "EUR"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 0,
+            "unitText": "d"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 0,
+            "unitText": "d"
+          }
+        }
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    },
+    "category": "Éducation médicale",
+    "sku": "GUIDE-INTERNE-SUISSE-2025",
+    "mpn": "GUIDE-INTERNE-SUISSE-2025"
+  }
+
+  useEffect(() => {
+    // Injecter les données structurées dans le head
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.text = JSON.stringify(structuredData)
+    document.head.appendChild(script)
+
+    return () => {
+      // Nettoyer le script lors du démontage
+      const existingScript = document.querySelector('script[type="application/ld+json"]')
+      if (existingScript) {
+        document.head.removeChild(existingScript)
+      }
+    }
+  }, [])
 
   const handleBuyGuide = async () => {
     try {
