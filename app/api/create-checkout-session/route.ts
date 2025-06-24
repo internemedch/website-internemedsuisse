@@ -17,8 +17,8 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'eur',
             product_data: {
-              name: '📚 Guide Complet - Devenir Interne de Médecine en Suisse',
-              description: '🎯 LE guide de référence écrit par un interne à Genève\n\n✅ Plus de 40 pages d\'expertise pratique\n📋 Toutes les démarches détaillées pas à pas\n🏥 Retour d\'expérience authentique d\'un médecin en poste\n💡 Conseils exclusifs pour maximiser vos chances\n\n📧 LIVRAISON IMMÉDIATE par email après paiement\n🔒 Accès instantané à votre guide PDF',
+              name: 'Guide Complet - Devenir Interne de Médecine en Suisse',
+              description: 'Guide de référence écrit par un interne à Genève • Plus de 40 pages d\'expertise pratique • Toutes les démarches détaillées • Conseils exclusifs d\'un médecin en poste • Livraison immédiate par email après paiement',
               images: [`${origin}/guide.png`],
             },
             unit_amount: 4999, // 49.99€ en centimes
