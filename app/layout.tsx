@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     images: [
       {
-        url: '/guide-internesuisse.png',
+        url: '/guide.png',
         width: 1200,
         height: 630,
         alt: 'Guide Complet - Devenir Interne de Médecine en Suisse',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
     description: 'Le guide pratique pour réussir son internat de médecine en Suisse',
-    images: ['/guide-internesuisse.png'],
+    images: ['/guide.png'],
   },
   
   // Favicon and icons
@@ -113,7 +113,7 @@ export default function RootLayout({
         />
         
         {/* Preload important resources */}
-        <link rel="preload" href="/guide-internesuisse.png" as="image" />
+        <link rel="preload" href="/guide.png" as="image" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -129,8 +129,7 @@ export default function RootLayout({
               "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
               "description": "Guide pratique pour réussir son internat de médecine en Suisse",
               "image": [
-                "https://interne-medecine-suisse.com/guide.png",
-                "https://interne-medecine-suisse.com/guide-internesuisse.png"
+                "https://interne-medecine-suisse.com/guide.png"
               ],
               "brand": {
                 "@type": "Brand",
