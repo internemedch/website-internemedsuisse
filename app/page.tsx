@@ -495,7 +495,7 @@ export default function InterneMedecineSuisse() {
               <FileText className="mr-2 h-5 w-5" />
               {isLoading ? 'Chargement...' : 'Acheter le Guide Maintenant'}
             </Button>
-            <p className="text-red-100 text-sm mt-4">Accès immédiat • Garantie satisfait ou remboursé 30 jours</p>
+            <p className="text-red-100 text-sm mt-4">Accès immédiat</p>
           </div>
         </div>
       </section>
