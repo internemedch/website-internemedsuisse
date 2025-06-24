@@ -3,7 +3,7 @@ import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://internemedecinesuisse.ch'),
+  metadataBase: new URL('https://interne-medecine-suisse.com'),
   title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
   description: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. + de 40 pages d\'expérience d\'un interne à Genève. Démarches, visa, logement, candidature aux hôpitaux.',
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'spécialisation médecine suisse',
     'expatriation médecin suisse'
   ].join(', '),
-  authors: [{ name: 'Dr. Thomas', url: 'https://internemedecinesuisse.ch' }],
+  authors: [{ name: 'Dr. Thomas', url: 'https://interne-medecine-suisse.com' }],
   creator: 'Dr. Thomas - Interne HUG',
   category: 'Medical Education',
   
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
     description: 'Le guide que j\'aurais aimé avoir pour réussir mon internat en Suisse. + de 40 pages d\'expérience en Suisse.',
-    url: 'https://internemedecinesuisse.ch',
+    url: 'https://interne-medecine-suisse.com',
     siteName: 'Interne Médecine Suisse',
     type: 'website',
     locale: 'fr_FR',
@@ -75,6 +75,16 @@ export const metadata: Metadata = {
     'theme-color': '#dc2626',
     'color-scheme': 'light',
     'format-detection': 'telephone=no',
+    'viewport': 'width=device-width, initial-scale=1',
+    'og:type': 'website',
+    'og:locale': 'fr_FR',
+    'twitter:site': '@internemedsuisse',
+    'apple-mobile-web-app-capable': 'yes',
+  },
+  
+  // Géolocalisation pour le SEO local
+  verification: {
+    google: 'your-google-verification-code',
   },
 }
 
@@ -87,7 +97,7 @@ export default function RootLayout({
     <html lang="fr" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="canonical" href="https://internemedecinesuisse.ch" />
+        <link rel="canonical" href="https://interne-medecine-suisse.com" />
         
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LG6RVDYKT"></script>
@@ -103,7 +113,11 @@ export default function RootLayout({
         />
         
         {/* Preload important resources */}
-        <link rel="preload" href="/fonts" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/guide-internesuisse.png" as="image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://checkout.stripe.com" />
         
         {/* Schema.org structured data for better SEO */}
         <script
@@ -115,8 +129,8 @@ export default function RootLayout({
               "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
               "description": "Guide pratique pour réussir son internat de médecine en Suisse",
               "image": [
-                "https://internemedecinesuisse.ch/guide.png",
-                "https://internemedecinesuisse.ch/guide-internesuisse.png"
+                "https://interne-medecine-suisse.com/guide.png",
+                "https://interne-medecine-suisse.com/guide-internesuisse.png"
               ],
               "brand": {
                 "@type": "Brand",
@@ -133,7 +147,7 @@ export default function RootLayout({
               },
               "offers": {
                 "@type": "Offer",
-                "url": "https://internemedecinesuisse.ch",
+                "url": "https://interne-medecine-suisse.com",
                 "priceCurrency": "EUR",
                 "price": "49.99",
                 "priceValidUntil": "2025-12-31",

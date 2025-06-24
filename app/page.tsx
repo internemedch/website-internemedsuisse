@@ -22,8 +22,8 @@ export default function InterneMedecineSuisse() {
     "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
     "description": "Le guide pratique complet pour réussir son internat de médecine en Suisse. Plus de 40 pages d'expérience pratique et de conseils d'expert.",
     "image": [
-      "https://internemedecinesuisse.com/guide.png",
-      "https://internemedecinesuisse.com/guide-internesuisse.png"
+      "https://interne-medecine-suisse.com/guide.png",
+      "https://interne-medecine-suisse.com/guide-internesuisse.png"
     ],
     "brand": {
       "@type": "Brand",
@@ -43,7 +43,7 @@ export default function InterneMedecineSuisse() {
       "price": "49.99",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
-      "url": "https://internemedecinesuisse.com",
+      "url": "https://interne-medecine-suisse.com",
       "shippingDetails": {
         "@type": "OfferShippingDetails",
         "shippingRate": {

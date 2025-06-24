@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, FileText, Download, Mail } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Paiement Réussi',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function SuccessPage() {
   return (
