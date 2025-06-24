@@ -157,9 +157,9 @@ export default function RootLayout({
                 },
                 "hasMerchantReturnPolicy": {
                   "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "CH",
+                  "applicableCountry": "FR",
                   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                  "merchantReturnDays": 30,
+                  "merchantReturnDays": 0,
                   "returnMethod": "https://schema.org/ReturnByMail",
                   "returnFees": "https://schema.org/FreeReturn"
                 },
