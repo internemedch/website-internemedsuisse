@@ -85,12 +85,35 @@ export default function InterneMedecineSuisse() {
     script.text = JSON.stringify(structuredData)
     document.head.appendChild(script)
 
+    // Ajouter les métadonnées Open Graph pour un meilleur affichage
+    const metaTags = [
+      { property: 'og:title', content: 'Guide Complet - Devenir Interne de Médecine en Suisse' },
+      { property: 'og:description', content: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. + de 40 pages d\'expérience d\'un interne à Genève.' },
+      { property: 'og:image', content: 'https://interne-medecine-suisse.com/guide.png' },
+      { property: 'og:url', content: 'https://interne-medecine-suisse.com' },
+      { property: 'og:type', content: 'product' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: 'https://interne-medecine-suisse.com/guide.png' }
+    ]
+
+    metaTags.forEach(tag => {
+      const meta = document.createElement('meta')
+      if (tag.property) meta.setAttribute('property', tag.property)
+      if (tag.name) meta.setAttribute('name', tag.name)
+      meta.setAttribute('content', tag.content)
+      document.head.appendChild(meta)
+    })
+
     return () => {
-      // Nettoyer le script lors du démontage
+      // Nettoyer les éléments lors du démontage
       const existingScript = document.querySelector('script[type="application/ld+json"]')
       if (existingScript) {
         document.head.removeChild(existingScript)
       }
+      
+      // Nettoyer les meta tags ajoutés
+      const addedMetas = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"]')
+      addedMetas.forEach(meta => document.head.removeChild(meta))
     }
   }, [])
 
