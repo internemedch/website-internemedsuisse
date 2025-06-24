@@ -32,6 +32,7 @@ export async function POST(request: NextRequest) {
       metadata: {
         product: 'guide-interne-medecine-suisse',
       },
+      allow_promotion_codes: true,
     })
 
     return NextResponse.json({ sessionId: session.id })
