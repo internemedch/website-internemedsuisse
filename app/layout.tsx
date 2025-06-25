@@ -119,23 +119,19 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://checkout.stripe.com" />
         
-        {/* Schema.org structured data for better SEO */}
+        {/* Schema.org structured data for Organization and Website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Product",
-              "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
-              "description": "Guide pratique pour réussir son internat de médecine en Suisse",
-              "image": [
-                "https://interne-medecine-suisse.com/guide.png"
-              ],
-              "brand": {
-                "@type": "Brand",
-                "name": "Interne Médecine Suisse"
-              },
-              "author": {
+              "@type": "Organization",
+              "name": "Interne Médecine Suisse",
+              "url": "https://interne-medecine-suisse.com",
+              "logo": "https://interne-medecine-suisse.com/guide.png",
+              "description": "Guide spécialisé pour les médecins souhaitant devenir internes en Suisse",
+              "foundingDate": "2024",
+              "founder": {
                 "@type": "Person",
                 "name": "Dr. Thomas",
                 "jobTitle": "Médecin Interne",
@@ -144,58 +140,28 @@ export default function RootLayout({
                   "name": "Hôpitaux Universitaires de Genève"
                 }
               },
-              "offers": {
-                "@type": "Offer",
-                "url": "https://interne-medecine-suisse.com",
-                "priceCurrency": "EUR",
-                "price": "49.99",
-                "priceValidUntil": "2025-12-31",
-                "availability": "https://schema.org/InStock",
-                "seller": {
-                  "@type": "Organization",
-                  "name": "Interne Médecine Suisse"
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "FR",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                  "merchantReturnDays": 0,
-                  "returnMethod": "https://schema.org/ReturnByMail",
-                  "returnFees": "https://schema.org/FreeReturn"
-                },
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0.00",
-                    "currency": "EUR"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 0,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 0,
-                      "unitCode": "DAY"
-                    }
-                  }
-                }
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "127",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "category": "Educational Material",
-              "productID": "guide-interne-medecine-suisse-2025"
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "French"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Interne Médecine Suisse",
+              "url": "https://interne-medecine-suisse.com",
+              "description": "Guide complet pour devenir interne de médecine en Suisse",
+              "inLanguage": "fr-FR",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Interne Médecine Suisse"
+              }
             })
           }}
         />

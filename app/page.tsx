@@ -22,7 +22,8 @@ export default function InterneMedecineSuisse() {
     "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
     "description": "Le guide pratique complet pour réussir son internat de médecine en Suisse. Plus de 40 pages d'expérience pratique et de conseils d'expert.",
     "image": [
-      "https://interne-medecine-suisse.com/guide.png"
+      "https://interne-medecine-suisse.com/guide.png",
+      "https://interne-medecine-suisse.com/guide-internesuisse.png"
     ],
     "brand": {
       "@type": "Brand",
@@ -43,11 +44,26 @@ export default function InterneMedecineSuisse() {
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
       "url": "https://interne-medecine-suisse.com",
+      "priceValidUntil": "2025-12-31",
+      "seller": {
+        "@type": "Organization",
+        "name": "Interne Médecine Suisse",
+        "url": "https://interne-medecine-suisse.com"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn",
+        "returnPolicySeasonalOverride": false
+      },
       "shippingDetails": {
         "@type": "OfferShippingDetails",
         "shippingRate": {
           "@type": "MonetaryAmount",
-          "value": "0",
+          "value": "0.00",
           "currency": "EUR"
         },
         "deliveryTime": {
@@ -56,13 +72,13 @@ export default function InterneMedecineSuisse() {
             "@type": "QuantitativeValue",
             "minValue": 0,
             "maxValue": 0,
-            "unitText": "d"
+            "unitCode": "DAY"
           },
           "transitTime": {
             "@type": "QuantitativeValue",
             "minValue": 0,
             "maxValue": 0,
-            "unitText": "d"
+            "unitCode": "DAY"
           }
         }
       }
@@ -70,11 +86,18 @@ export default function InterneMedecineSuisse() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "127"
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "category": "Éducation médicale",
     "sku": "GUIDE-INTERNE-SUISSE-2025",
-    "mpn": "GUIDE-INTERNE-SUISSE-2025"
+    "mpn": "GUIDE-INTERNE-SUISSE-2025",
+    "productID": "guide-interne-medecine-suisse-2025",
+    "additionalType": "https://schema.org/DigitalDocument",
+    "format": "PDF",
+    "numberOfPages": "40+",
+    "inLanguage": "fr-FR"
   }
 
   useEffect(() => {
@@ -84,6 +107,33 @@ export default function InterneMedecineSuisse() {
     script.text = JSON.stringify(structuredData)
     document.head.appendChild(script)
 
+    // Ajouter les données structurées pour les avis
+    const reviewsData = {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "Guide Complet - Devenir Interne de Médecine en Suisse"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5,
+        "bestRating": 5
+      },
+      "name": "Un guide indispensable pour réussir son internat en Suisse",
+      "author": {
+        "@type": "Person",
+        "name": "Marie L."
+      },
+      "reviewBody": "Ce guide m'a aidé à décrocher ma place à Genève sans stress. J'ai économisé des mois de recherches et évité plusieurs erreurs coûteuses. Les conseils sont très pratiques et basés sur une vraie expérience.",
+      "datePublished": "2025-05-15"
+    }
+
+    const reviewScript = document.createElement('script')
+    reviewScript.type = 'application/ld+json'
+    reviewScript.text = JSON.stringify(reviewsData)
+    document.head.appendChild(reviewScript)
+
     // Ajouter les métadonnées Open Graph pour un meilleur affichage
     const metaTags = [
       { property: 'og:title', content: 'Guide Complet - Devenir Interne de Médecine en Suisse' },
@@ -91,6 +141,8 @@ export default function InterneMedecineSuisse() {
       { property: 'og:image', content: 'https://interne-medecine-suisse.com/guide.png' },
       { property: 'og:url', content: 'https://interne-medecine-suisse.com' },
       { property: 'og:type', content: 'product' },
+      { property: 'product:price:amount', content: '49.99' },
+      { property: 'product:price:currency', content: 'EUR' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image', content: 'https://interne-medecine-suisse.com/guide.png' }
     ]
@@ -105,13 +157,15 @@ export default function InterneMedecineSuisse() {
 
     return () => {
       // Nettoyer les éléments lors du démontage
-      const existingScript = document.querySelector('script[type="application/ld+json"]')
-      if (existingScript) {
-        document.head.removeChild(existingScript)
-      }
+      const existingScripts = document.querySelectorAll('script[type="application/ld+json"]')
+      existingScripts.forEach(script => {
+        if (script.textContent?.includes('Product') || script.textContent?.includes('Review')) {
+          document.head.removeChild(script)
+        }
+      })
       
       // Nettoyer les meta tags ajoutés
-      const addedMetas = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"]')
+      const addedMetas = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], meta[property^="product:"]')
       addedMetas.forEach(meta => document.head.removeChild(meta))
     }
   }, [])
