@@ -5,27 +5,29 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   metadataBase: new URL('https://interne-medecine-suisse.com'),
   title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
-  description: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. + de 40 pages d\'expérience d\'un interne à Genève. Démarches, visa, logement, candidature aux hôpitaux.',
+  description: 'Guide pratique pour obtenir un poste d\'interne en Suisse. Retour d\'expérience d\'un médecin : de l\'internat en médecine générale en France à la radiologie à Genève. + de 40 pages de conseils pratiques.',
   keywords: [
-    'internat médecine suisse',
-    'résidanat suisse',
-    'médecine interne genève',
-    'guide médecin suisse',
-    'diplôme médecine reconnaissance suisse',
-    'visa médecin suisse',
-    'hôpitaux universitaires genève',
-    'étudiant médecine france suisse',
-    'spécialisation médecine suisse',
-    'expatriation médecin suisse'
+    'devenir interne médecine suisse',
+    'obtenir poste interne suisse',
+    'internat médecine suisse étranger',
+    'médecine générale vers radiologie suisse',
+    'internat radiologie genève',
+    'candidature interne hôpitaux suisses',
+    'reconnaissance diplôme médecin france suisse',
+    'visa travail médecin suisse',
+    'expérience interne genève',
+    'transition médecine france suisse',
+    'guide médecin étranger suisse',
+    'démarches administratives médecin suisse'
   ].join(', '),
   authors: [{ name: 'Dr. Thomas', url: 'https://interne-medecine-suisse.com' }],
-  creator: 'Dr. Thomas - Interne HUG',
+  creator: 'Dr. Thomas - Radiologue à Genève, ex-interne en France',
   category: 'Medical Education',
   
   // Open Graph / Social Media
   openGraph: {
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
-    description: 'Le guide que j\'aurais aimé avoir pour réussir mon internat en Suisse. + de 40 pages d\'expérience en Suisse.',
+    description: 'De l\'internat en médecine générale en France à la radiologie à Genève : mon parcours et mes conseils pour réussir votre transition.',
     url: 'https://interne-medecine-suisse.com',
     siteName: 'Interne Médecine Suisse',
     type: 'website',
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Guide Complet - Devenir Interne de Médecine en Suisse',
-    description: 'Le guide pratique pour réussir son internat de médecine en Suisse',
+    description: 'Retour d\'expérience : de l\'internat en France à la radiologie à Genève. Guide pratique pour médecins étrangers.',
     images: ['/guide.png'],
   },
   
@@ -129,21 +131,23 @@ export default function RootLayout({
               "name": "Interne Médecine Suisse",
               "url": "https://interne-medecine-suisse.com",
               "logo": "https://interne-medecine-suisse.com/guide.png",
-              "description": "Guide spécialisé pour les médecins souhaitant devenir internes en Suisse",
+              "description": "Guide pratique pour obtenir un poste d'interne en Suisse - Expérience d'un médecin passé de l'internat en France à la radiologie à Genève",
               "foundingDate": "2024",
               "founder": {
                 "@type": "Person",
                 "name": "Dr. Thomas",
-                "jobTitle": "Médecin Interne",
+                "jobTitle": "Radiologue",
                 "worksFor": {
                   "@type": "Organization",
-                  "name": "Hôpitaux Universitaires de Genève"
-                }
+                  "name": "Hôpital de Genève"
+                },
+                "description": "Radiologue à Genève, ex-interne en médecine générale en France"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
-                "availableLanguage": "French"
+                "availableLanguage": "French",
+                "email": "interne-medecine-suisse@proton.me"
               }
             })
           }}
@@ -156,7 +160,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "Interne Médecine Suisse",
               "url": "https://interne-medecine-suisse.com",
-              "description": "Guide complet pour devenir interne de médecine en Suisse",
+              "description": "Guide pratique pour obtenir un poste d'interne en Suisse - Retour d'expérience d'un médecin passé de l'internat en France à la radiologie à Genève",
               "inLanguage": "fr-FR",
               "publisher": {
                 "@type": "Organization",

@@ -20,7 +20,7 @@ export default function InterneMedecineSuisse() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Guide Complet - Devenir Interne de Médecine en Suisse",
-    "description": "Le guide pratique complet pour réussir son internat de médecine en Suisse. Plus de 40 pages d'expérience pratique et de conseils d'expert.",
+    "description": "Guide pratique pour obtenir un poste d'interne en Suisse. Retour d'expérience d'un médecin : de l'internat en médecine générale en France à la radiologie à Genève. Plus de 40 pages de conseils pratiques.",
     "image": [
       "https://interne-medecine-suisse.com/guide.png",
       "https://interne-medecine-suisse.com/guide-internesuisse.png"
@@ -32,11 +32,12 @@ export default function InterneMedecineSuisse() {
     "author": {
       "@type": "Person",
       "name": "Dr. Thomas",
-      "jobTitle": "Médecin Interne",
+      "jobTitle": "Radiologue",
       "worksFor": {
         "@type": "Organization",
-        "name": "Hôpitaux Universitaires de Genève"
-      }
+        "name": "Hôpital de Genève"
+      },
+      "description": "Radiologue à Genève, ex-interne en médecine générale en France"
     },
     "offers": {
       "@type": "Offer",
@@ -120,12 +121,12 @@ export default function InterneMedecineSuisse() {
         "ratingValue": 5,
         "bestRating": 5
       },
-      "name": "Un guide indispensable pour réussir son internat en Suisse",
+      "name": "Un guide indispensable pour obtenir un poste d'interne en Suisse",
       "author": {
         "@type": "Person",
         "name": "Marie L."
       },
-      "reviewBody": "Ce guide m'a aidé à décrocher ma place à Genève sans stress. J'ai économisé des mois de recherches et évité plusieurs erreurs coûteuses. Les conseils sont très pratiques et basés sur une vraie expérience.",
+      "reviewBody": "Ce guide m'a aidé à décrocher mon poste d'interne à Genève. L'expérience partagée par Dr. Thomas est authentique et les démarches sont expliquées étape par étape. J'ai évité plusieurs erreurs coûteuses grâce à ses conseils pratiques.",
       "datePublished": "2025-05-15"
     }
 
@@ -137,7 +138,7 @@ export default function InterneMedecineSuisse() {
     // Ajouter les métadonnées Open Graph pour un meilleur affichage
     const metaTags = [
       { property: 'og:title', content: 'Guide Complet - Devenir Interne de Médecine en Suisse' },
-      { property: 'og:description', content: 'Le guide pratique de référence pour réussir son internat de médecine en Suisse. + de 40 pages d\'expérience d\'un interne à Genève.' },
+      { property: 'og:description', content: 'Retour d\'expérience : de l\'internat en médecine générale en France à la radiologie à Genève. Guide pratique pour obtenir un poste d\'interne en Suisse.' },
       { property: 'og:image', content: 'https://interne-medecine-suisse.com/guide.png' },
       { property: 'og:url', content: 'https://interne-medecine-suisse.com' },
       { property: 'og:type', content: 'product' },
@@ -249,7 +250,7 @@ export default function InterneMedecineSuisse() {
                   Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 mb-8">
-                  Le guide pratique que j'aurais aimé avoir pour réussir mon internat en Suisse
+                  Retour d'expérience : de l'internat en médecine générale en France à la radiologie à Genève
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
                   <Button 
@@ -307,7 +308,7 @@ export default function InterneMedecineSuisse() {
               Pourquoi ce guide va changer votre parcours
             </h2>
             <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              Évitez les erreurs coûteuses et gagnez des mois dans vos démarches
+              Évitez les erreurs coûteuses et maximisez vos chances d'obtenir un poste d'interne en Suisse
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -342,7 +343,7 @@ export default function InterneMedecineSuisse() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3">Retour d'Expérience</h3>
                   <p className="text-gray-600">
-                    Mon vécu d'interne à Genève : ce qui m'a aidé et les pièges à éviter absolument
+                    Mon parcours : de l'internat en médecine générale en France à la radiologie à Genève
                   </p>
                 </CardContent>
               </Card>
@@ -373,10 +374,10 @@ export default function InterneMedecineSuisse() {
               ))}
             </div>
             <blockquote className="text-2xl md:text-3xl font-medium text-white mb-6">
-              "Ce guide m'a aidé à décrocher ma place à Genève sans stress. J'ai économisé des mois de recherches et
-              évité plusieurs erreurs coûteuses."
+              "Ce guide m'a aidé à décrocher mon poste d'interne à Genève. L'expérience partagée par Dr. Thomas est 
+              authentique et les démarches sont expliquées étape par étape."
             </blockquote>
-            <cite className="text-red-100 text-lg">— Marie, étudiante en 6e année de médecine</cite>
+            <cite className="text-red-100 text-lg">— Marie, médecin généraliste</cite>
           </div>
         </div>
       </section>
@@ -389,7 +390,7 @@ export default function InterneMedecineSuisse() {
               Ce que vous allez apprendre
             </h2>
             <p className="text-xl text-gray-600 text-center mb-12">
-              Un guide complet de A à Z pour réussir votre internat en Suisse
+              Un guide complet de A à Z pour obtenir votre poste d'interne en Suisse
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -534,22 +535,22 @@ export default function InterneMedecineSuisse() {
 
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                Je suis Dr. Thomas, médecin interne dans le service radiologie aux Hôpitaux Universitaires de Genève depuis 2024.
-                Diplômé de la faculté de médecine de Lyon, j'ai vécu exactement ce que vous traversez aujourd'hui.
+                Je suis Dr. Thomas, radiologue à Genève depuis 2024. Diplômé de la faculté de médecine de Lyon, 
+                j'étais interne en médecine générale en France avant d'obtenir un poste d'interne en radiologie à Genève.
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 En 2023, j'ai passé des mois à chercher des informations éparpillées sur internet, à contacter des
-                dizaines de personnes, à faire des erreurs coûteuses qui ont retardé mon projet. J'ai perdu un temps
-                précieux et beaucoup d'énergie dans ce parcours du combattant.
+                dizaines de personnes, à naviguer dans les démarches administratives complexes. J'ai fait des erreurs 
+                coûteuses qui ont retardé mon projet et perdu un temps précieux dans ce parcours du combattant.
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 Aujourd'hui installé et épanoui dans ma pratique à Genève, j'ai décidé de compiler toute cette
                 expérience dans un guide pratique. Mon objectif : vous faire gagner des mois de recherches et vous
-                éviter les pièges que j'ai rencontrés.
+                éviter les pièges que j'ai rencontrés lors de ma transition.
               </p>
               <p className="text-lg leading-relaxed font-medium text-gray-900">
-                Ce guide, c'est le raccourci que j'aurais aimé avoir. Il contient tout ce que j'ai appris sur le
-                terrain, les contacts utiles, et surtout, la méthode qui fonctionne.
+                Ce guide, c'est le raccourci que j'aurais aimé avoir. Il contient mon parcours concret, les contacts utiles, 
+                et surtout, la méthode qui fonctionne pour obtenir un poste d'interne en Suisse.
               </p>
             </div>
           </div>
@@ -588,7 +589,7 @@ export default function InterneMedecineSuisse() {
                 </div>
                 <span className="text-lg font-bold">Interne Médecine Suisse</span>
               </div>
-              <p className="text-gray-400 text-sm">Le guide de référence pour devenir interne de médecine en Suisse.</p>
+              <p className="text-gray-400 text-sm">Le guide de référence pour obtenir un poste d'interne de médecine en Suisse.</p>
             </div>
 
             <div>

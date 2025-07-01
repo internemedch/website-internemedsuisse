@@ -52,7 +52,7 @@ const emailTemplate = (customerName: string, downloadUrl: string) => `
         
         <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 25px 0; text-align: center;">
             <h2 style="color: #dc2626; margin: 0 0 15px 0; font-size: 20px;">📚 Guide Complet - Devenir Interne de Médecine en Suisse</h2>
-            <p style="margin: 10px 0; color: #6b7280;">Plus de 40 pages • Format PDF • Accès immédiat</p>
+            <p style="margin: 10px 0; color: #6b7280;">Plus de 40 pages • Expérience d'un interne radiologue à Genève • Format PDF • Accès immédiat</p>
             
             <a href="${downloadUrl}" 
                style="display: inline-block; background: #dc2626; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 20px 0;">
@@ -67,30 +67,41 @@ const emailTemplate = (customerName: string, downloadUrl: string) => `
         <div style="background: #ecfdf5; border: 1px solid #d1fae5; padding: 20px; border-radius: 8px; margin: 25px 0;">
             <h3 style="color: #059669; margin: 0 0 10px 0; font-size: 16px;">✅ Ce que vous allez découvrir :</h3>
             <ul style="margin: 10px 0; padding-left: 20px; color: #065f46;">
-                <li>Procédure complète de reconnaissance de diplôme</li>
-                <li>Démarches visa et permis de travail</li>
-                <li>Conseils logement et installation à Genève</li>
-                <li>Stratégies de candidature aux hôpitaux</li>
-                <li>Aspects financiers et optimisation fiscale</li>
-                <li>Retour d'expérience d'un interne à Genève</li>
+                <li>Comment obtenir un poste d'interne en Suisse (démarches complètes)</li>
+                <li>Reconnaissance de diplôme et équivalences pour médecins étrangers</li>
+                <li>Procédures visa et permis de travail spécifiques</li>
+                <li>Stratégies de candidature aux hôpitaux suisses</li>
+                <li>Installation à Genève : logement, coût de la vie, fiscalité</li>
+                <li>Mon parcours personnel : de l'internat français à la radiologie à Genève</li>
+                <li>Conseils pratiques et pièges à éviter</li>
+                <li>Contacts utiles et ressources indispensables</li>
             </ul>
+        </div>
+        
+        <div style="background: #fef3c7; border: 1px solid #fcd34d; padding: 20px; border-radius: 8px; margin: 25px 0;">
+            <h3 style="color: #92400e; margin: 0 0 10px 0; font-size: 16px;">👨‍⚕️ L'expérience qui fait la différence :</h3>
+            <p style="margin: 0; color: #78350f; font-size: 14px; font-style: italic;">
+                "J'étais interne en medecine générale en France et j'ai réussi à décrocher un poste d'interne en radiologie à Genève. 
+                Ce guide partage mon expérience concrète, les obstacles rencontrés et les solutions que j'ai trouvées. 
+                Un retour d'expérience authentique pour vous faire gagner du temps et éviter les erreurs que j'ai commises."
+            </p>
         </div>
         
         <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 30px;">
             <p style="margin: 0; color: #6b7280; font-size: 14px;">
                 <strong>Besoin d'aide ?</strong><br>
-                N'hésitez pas à me contacter à : <a href="mailto:contact@internemedecinesuisse.ch" style="color: #dc2626;">contact@internemedecinesuisse.ch</a>
+                N'hésitez pas à me contacter à : <a href="mailto:interne-medecine-suisse@proton.me" style="color: #dc2626;">nterne-medecine-suisse@proton.me</a>
             </p>
             
             <p style="margin: 15px 0 0 0; color: #6b7280; font-size: 14px;">
-                Bonne chance dans votre parcours ! 🚀<br>
-                <em>Dr. Thomas</em>
+                Bonne chance dans votre projet d'intégrer l'internat en Suisse ! 🇨🇭✨<br>
+                <em>Dr. Thomas - Radiologue à  Genève, ex-interne en France</em>
             </p>
         </div>
     </div>
     
     <div style="text-align: center; padding: 20px; color: #9ca3af; font-size: 12px;">
-        <p>© 2025 Interne Médecine Suisse - Tous droits réservés</p>
+        <p>© 2025 Interne Médecine Suisse - Guide pratique pour intégrer l'internat en Suisse</p>
     </div>
 </body>
 </html>
@@ -147,7 +158,7 @@ export async function POST(request: NextRequest) {
         const emailResult = await resend.emails.send({
           from: 'Dr. Thomas <noreply@interne-medecine-suisse.com>',
           to: [customerEmail],
-          subject: '🎉 Votre Guide Interne Médecine Suisse est prêt !',
+          subject: '🎉 Votre Guide pour Devenir Interne en Suisse est prêt !',
           html: emailTemplate(customerName, downloadUrl),
         })
 
