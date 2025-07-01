@@ -80,8 +80,11 @@ export const metadata: Metadata = {
     'viewport': 'width=device-width, initial-scale=1',
     'og:type': 'website',
     'og:locale': 'fr_FR',
+    'og:site_name': 'Interne Médecine Suisse',
     'twitter:site': '@internemedsuisse',
     'apple-mobile-web-app-capable': 'yes',
+    'application-name': 'Interne Médecine Suisse',
+    'apple-mobile-web-app-title': 'Interne Médecine Suisse',
   },
   
   // Géolocalisation pour le SEO local
@@ -159,12 +162,19 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Interne Médecine Suisse",
+              "alternateName": "Interne Médecine Suisse",
               "url": "https://interne-medecine-suisse.com",
               "description": "Guide pratique pour obtenir un poste d'interne en Suisse - Retour d'expérience d'un médecin passé de l'internat en France à la radiologie à Genève",
               "inLanguage": "fr-FR",
               "publisher": {
                 "@type": "Organization",
-                "name": "Interne Médecine Suisse"
+                "name": "Interne Médecine Suisse",
+                "legalName": "Interne Médecine Suisse"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://interne-medecine-suisse.com?q={search_term_string}",
+                "query-input": "required name=search_term_string"
               }
             })
           }}
