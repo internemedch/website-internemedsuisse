@@ -87,10 +87,6 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-title': 'Interne Médecine Suisse',
   },
   
-  // Géolocalisation pour le SEO local
-  verification: {
-    google: 'your-google-verification-code',
-  },
 }
 
 export default function RootLayout({
@@ -116,6 +112,9 @@ export default function RootLayout({
             `,
           }}
         />
+        
+        {/* Application meta */}
+        <meta name="application-name" content="Interne Medecine Suisse" />
         
         {/* Preload important resources */}
         <link rel="preload" href="/guide.png" as="image" />
