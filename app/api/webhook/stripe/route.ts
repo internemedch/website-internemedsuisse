@@ -90,7 +90,7 @@ const emailTemplate = (customerName: string, downloadUrl: string) => `
         <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 30px;">
             <p style="margin: 0; color: #6b7280; font-size: 14px;">
                 <strong>Besoin d'aide ?</strong><br>
-                N'hésitez pas à me contacter à : <a href="mailto:interne-medecine-suisse@proton.me" style="color: #dc2626;">nterne-medecine-suisse@proton.me</a>
+                N'hésitez pas à me contacter à : <a href="mailto:interne-medecine-suisse@proton.me" style="color: #dc2626;">interne-medecine-suisse@proton.me</a>
             </p>
             
             <p style="margin: 15px 0 0 0; color: #6b7280; font-size: 14px;">
