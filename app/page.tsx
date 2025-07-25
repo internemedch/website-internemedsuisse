@@ -382,11 +382,11 @@ export default function InterneMedecineSuisse() {
               </p>
             </div>
 
-                         {/* Carousel d'images qui défile - pause sur hover */}
+                         {/* Carousel d'images qui défile en continu */}
              <div className="relative">
                <div className="overflow-hidden">
                  <div className="flex animate-scroll-left animate-pause space-x-4 md:space-x-8">
-                   {/* Image 1 - Stella */}
+                   {/* Premier cycle d'images */}
                    <div className="flex-shrink-0">
                      <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
                        <Image
@@ -400,7 +400,6 @@ export default function InterneMedecineSuisse() {
                      </div>
                    </div>
 
-                   {/* Image 2 - Tom */}
                    <div className="flex-shrink-0">
                      <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
                        <Image
@@ -414,7 +413,6 @@ export default function InterneMedecineSuisse() {
                      </div>
                    </div>
 
-                   {/* Image 3 - Emma */}
                    <div className="flex-shrink-0">
                      <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
                        <Image
@@ -428,7 +426,47 @@ export default function InterneMedecineSuisse() {
                      </div>
                    </div>
 
-                   {/* Duplication pour l'effet de boucle infinie */}
+                   {/* Deuxième cycle d'images (duplication pour continuité) */}
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/1.PNG"
+                         alt="Témoignage client Stella - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
+
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/2.PNG"
+                         alt="Témoignage client Tom - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
+
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/3.PNG"
+                         alt="Témoignage client Emma - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
+
+                   {/* Troisième cycle d'images (encore plus de duplication) */}
                    <div className="flex-shrink-0">
                      <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
                        <Image
