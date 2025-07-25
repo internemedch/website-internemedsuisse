@@ -382,98 +382,98 @@ export default function InterneMedecineSuisse() {
               </p>
             </div>
 
-            {/* Carousel d'images qui défile - pause sur hover */}
-            <div className="relative">
-              <div className="overflow-hidden">
-                <div className="flex animate-scroll-left animate-pause space-x-8">
-                  {/* Image 1 - Stella */}
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/1.PNG"
-                        alt="Témoignage client Stella - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
+                         {/* Carousel d'images qui défile - pause sur hover */}
+             <div className="relative">
+               <div className="overflow-hidden">
+                 <div className="flex animate-scroll-left animate-pause space-x-4 md:space-x-8">
+                   {/* Image 1 - Stella */}
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/1.PNG"
+                         alt="Témoignage client Stella - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
 
-                  {/* Image 2 - Tom */}
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/2.PNG"
-                        alt="Témoignage client Tom - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
+                   {/* Image 2 - Tom */}
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/2.PNG"
+                         alt="Témoignage client Tom - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
 
-                  {/* Image 3 - Emma */}
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/3.PNG"
-                        alt="Témoignage client Emma - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
+                   {/* Image 3 - Emma */}
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/3.PNG"
+                         alt="Témoignage client Emma - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
 
-                  {/* Duplication pour l'effet de boucle infinie */}
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/1.PNG"
-                        alt="Témoignage client Stella - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
+                   {/* Duplication pour l'effet de boucle infinie */}
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/1.PNG"
+                         alt="Témoignage client Stella - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
 
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/2.PNG"
-                        alt="Témoignage client Tom - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/2.PNG"
+                         alt="Témoignage client Tom - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
 
-                  <div className="flex-shrink-0">
-                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
-                      <Image
-                        src="/3.PNG"
-                        alt="Témoignage client Emma - Guide Interne Médecine Suisse"
-                        width={350}
-                        height={600}
-                        className="rounded-lg shadow-lg max-h-96 object-cover"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Gradient overlay pour un meilleur effet visuel */}
-              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-red-600 to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-red-600 to-transparent z-10 pointer-events-none"></div>
-            </div>
+                   <div className="flex-shrink-0">
+                     <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-2 md:p-3 shadow-2xl">
+                       <Image
+                         src="/3.PNG"
+                         alt="Témoignage client Emma - Guide Interne Médecine Suisse"
+                         width={280}
+                         height={480}
+                         className="rounded-lg shadow-lg max-h-64 md:max-h-96 w-auto object-cover"
+                         quality={90}
+                       />
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               
+               {/* Gradient overlay pour un meilleur effet visuel */}
+               <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-red-600 to-transparent z-10 pointer-events-none"></div>
+               <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-red-600 to-transparent z-10 pointer-events-none"></div>
+             </div>
           </div>
         </div>
       </section>
