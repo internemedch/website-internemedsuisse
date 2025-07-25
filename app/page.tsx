@@ -364,20 +364,116 @@ export default function InterneMedecineSuisse() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-20 bg-red-600">
+      {/* Testimonials Images Carousel - Preuve Sociale */}
+      <section className="py-20 bg-red-600 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-yellow-300 fill-current" />
-              ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-300 fill-current" />
+                ))}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ce que disent nos lecteurs
+              </h2>
+              <p className="text-red-100 text-xl">
+                Plus de 500 médecins nous font confiance
+              </p>
             </div>
-            <blockquote className="text-2xl md:text-3xl font-medium text-white mb-6">
-              "Ce guide m'a aidé à décrocher mon poste d'interne à Genève. L'expérience partagée par Dr. Thomas est 
-              authentique et les démarches sont expliquées étape par étape."
-            </blockquote>
-            <cite className="text-red-100 text-lg">— Marie, médecin généraliste</cite>
+
+            {/* Carousel d'images qui défile - pause sur hover */}
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div className="flex animate-scroll-left animate-pause space-x-8">
+                  {/* Image 1 - Stella */}
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/1.PNG"
+                        alt="Témoignage client Stella - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Image 2 - Tom */}
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/2.PNG"
+                        alt="Témoignage client Tom - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Image 3 - Emma */}
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/3.PNG"
+                        alt="Témoignage client Emma - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Duplication pour l'effet de boucle infinie */}
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/1.PNG"
+                        alt="Témoignage client Stella - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/2.PNG"
+                        alt="Témoignage client Tom - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="relative bg-white/10 backdrop-blur border-white/20 rounded-lg p-3 shadow-2xl">
+                      <Image
+                        src="/3.PNG"
+                        alt="Témoignage client Emma - Guide Interne Médecine Suisse"
+                        width={350}
+                        height={600}
+                        className="rounded-lg shadow-lg max-h-96 object-cover"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Gradient overlay pour un meilleur effet visuel */}
+              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-red-600 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-red-600 to-transparent z-10 pointer-events-none"></div>
+            </div>
           </div>
         </div>
       </section>

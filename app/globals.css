@@ -92,3 +92,21 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Animations pour le carousel d'avis */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+.animate-pause:hover {
+  animation-play-state: paused;
+}
