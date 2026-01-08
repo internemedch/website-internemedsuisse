@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://interne-medecine-suisse.com'),
-  title: 'Guide Complet 2025 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
+  title: 'Guide Complet 2026 - Devenir Interne de Médecine en Suisse | Interne Médecine Suisse',
   description: 'Guide pratique pour obtenir un poste d\'interne en Suisse. Retour d\'expérience d\'un médecin : de l\'internat en médecine générale en France à la radiologie à Genève. + de 40 pages de conseils pratiques.',
   keywords: [
     'devenir interne médecine suisse',

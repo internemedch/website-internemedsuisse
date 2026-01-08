@@ -45,7 +45,7 @@ export default function InterneMedecineSuisse() {
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
       "url": "https://interne-medecine-suisse.com",
-      "priceValidUntil": "2025-12-31",
+      "priceValidUntil": "2026-12-31",
       "seller": {
         "@type": "Organization",
         "name": "Interne Médecine Suisse",
@@ -92,9 +92,9 @@ export default function InterneMedecineSuisse() {
       "worstRating": "1"
     },
     "category": "Éducation médicale",
-    "sku": "GUIDE-INTERNE-SUISSE-2025",
-    "mpn": "GUIDE-INTERNE-SUISSE-2025",
-    "productID": "guide-interne-medecine-suisse-2025",
+    "sku": "GUIDE-INTERNE-SUISSE-2026",
+    "mpn": "GUIDE-INTERNE-SUISSE-2026",
+    "productID": "guide-interne-medecine-suisse-2026",
     "additionalType": "https://schema.org/DigitalDocument",
     "format": "PDF",
     "numberOfPages": "40+",
@@ -127,7 +127,7 @@ export default function InterneMedecineSuisse() {
         "name": "Marie L."
       },
       "reviewBody": "Ce guide m'a aidé à décrocher mon poste d'interne à Genève. L'expérience partagée par Dr. Thomas est authentique et les démarches sont expliquées étape par étape. J'ai évité plusieurs erreurs coûteuses grâce à ses conseils pratiques.",
-      "datePublished": "2025-05-15"
+      "datePublished": "2026-05-15"
     }
 
     const reviewScript = document.createElement('script')
@@ -245,7 +245,7 @@ export default function InterneMedecineSuisse() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Contenu textuel */}
               <div className="text-center lg:text-left">
-                <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2025</Badge>
+                <Badge className="mb-6 bg-red-100 text-red-800 hover:bg-red-100">Guide Exclusif 2026</Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                   Devenir Interne de Médecine en Suisse : <span className="text-red-600">Le Guide Complet</span>
                 </h1>
@@ -760,14 +760,14 @@ export default function InterneMedecineSuisse() {
             <div>
               <h4 className="font-semibold mb-4">Disclaimer</h4>
               <p className="text-xs text-gray-400">
-                Ce guide est basé sur une expérience personnelle et des informations disponibles en 2025. Les procédures
+                Ce guide est basé sur une expérience personnelle et des informations disponibles en 2026. Les procédures
                 peuvent évoluer. Vérifiez toujours les informations officielles.
               </p>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Interne Médecine Suisse. Tous droits réservés.</p>
+            <p>&copy; 2026 Interne Médecine Suisse. Tous droits réservés.</p>
           </div>
         </div>
       </footer>

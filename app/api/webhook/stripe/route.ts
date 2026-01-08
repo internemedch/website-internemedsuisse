@@ -101,7 +101,7 @@ const emailTemplate = (customerName: string, downloadUrl: string) => `
     </div>
     
     <div style="text-align: center; padding: 20px; color: #9ca3af; font-size: 12px;">
-        <p>© 2025 Interne Médecine Suisse - Guide pratique pour intégrer l'internat en Suisse</p>
+        <p>© 2026 Interne Médecine Suisse - Guide pratique pour intégrer l'internat en Suisse</p>
     </div>
 </body>
 </html>
